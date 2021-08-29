@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+$base-white:#ffffff;
+$base-black1:#4a4a4a;
+$base-gray1:#757575;
+$base-gray2: #616161;
+$base-orange:#fbad27;
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: $base-gray1;
+    font-size: 16px;
+    background-color: red;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+    max-width: 1306px;
+}
+
+.header {
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    color: $base-white;
+    &__inner {
+        display: grid;
+        grid-template-columns: 520px 1fr auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #8795a9;
+    }
+    &__nav {
+        grid-column-start: 1;
+    }
+    &__address {
+        grid-column-start: 3;
+    }
+    &__tel {
+        display: grid;
+        grid-template-columns: 16px auto;
+        grid-column-start: 2;
+        column-gap: 11px;
+        font-style: normal;
+    }
+    &__tel::before {
+        content: "";
+        display: block;
+        margin-top: 10px;
+        width: 16px;
+        height: 16px;
+        background-image: url("../img/header__phone.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.nav {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        grid-column-gap: 25px;
+    }
+    &__item {
+        a {
+            transition: text-decoration 0.2s linear;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
