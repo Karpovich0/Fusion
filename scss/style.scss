@@ -9,8 +9,10 @@ body {
     font-weight: 400;
     color: $base-gray1;
     font-size: 16px;
-    background-color: red;
 }
+
+
+/* END body*/
 
 .container {
     margin-left: auto;
@@ -19,9 +21,41 @@ body {
     padding-left: 15px;
     width: 100%;
     max-width: 1306px;
+    &--paddings {
+        padding-top: 150px;
+        padding-bottom: 75px;
+    }
+    &__header {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 84px;
+        width: 100%;
+        max-width: 935px;
+        text-align: center;
+    }
+    &__title {
+        padding-bottom: 16px;
+        font-size: 50px;
+        letter-spacing: 0.02em;
+        color: $base-black1;
+        line-height: 1;
+    }
+    &__small-subtext {
+        line-height: 25px;
+        letter-spacing: 0.02em;
+    }
 }
 
+
+/* END container */
+
 .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
     line-height: 37px;
     letter-spacing: 0.02em;
     color: $base-white;
@@ -58,6 +92,9 @@ body {
     }
 }
 
+
+/* END header */
+
 .nav {
     &__list {
         display: grid;
@@ -73,3 +110,170 @@ body {
         }
     }
 }
+
+
+/* END nav */
+
+.intro {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #7c7b7b;
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: "";
+        background: url(/img/intro__bg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.15;
+        filter: blur(2px);
+    }
+    &__body {
+        position: relative;
+        padding-bottom: 114px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title {
+        margin-bottom: 14px;
+        font-size: 72px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: $base-white;
+        line-height: 1;
+    }
+    &__subtext {
+        margin-bottom: 25px;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: $base-white;
+    }
+    &__footer {
+        position: absolute;
+        left: 161px;
+        bottom: 59px;
+        padding-left: 65px;
+        width: 183px;
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        color: $base-white;
+        border: none;
+        background-color: transparent;
+        &::before {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            content: "";
+            display: block;
+            width: 55px;
+            height: 55px;
+            background-image: url(../img/intro__btn.png);
+        }
+        b {
+            display: block;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+/* END intro */
+
+.btn {
+    width: 225px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: $base-white;
+    background-color: $base-orange;
+    border-radius: 24px;
+    border: none;
+    transition: background-color 0.2s linear;
+    &:hover {
+        background-color: #e4ac4a;
+    }
+}
+
+.welcome {
+    &__inner {}
+    &__list {
+        padding-top: 85px;
+        padding-bottom: 170px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 930px;
+    }
+    &__item {
+        padding: 25px;
+        width: 100%;
+        max-width: 263px;
+    }
+    &__img {
+        margin-bottom: 25px;
+    }
+    &__title {
+        margin-bottom: 17px;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: $base-black1;
+    }
+    &__text {
+        line-height: 25px;
+        letter-spacing: 0.02em;
+        color: $base-gray1;
+    }
+    &__controls {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        align-items: center;
+        width: 86px;
+        height: 24px;
+    }
+    &__circle {
+        width: 24px;
+        display: flex;
+        justify-content: center;
+    }
+    &__btn {
+        padding: 0;
+        width: 14px;
+        height: 14px;
+        background-color: #999999;
+        border: 3px solid $base-white;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 0 0 1px #999999;
+        outline: none;
+    }
+    &__btn:hover,
+    &__btn--active {
+        width: 24px;
+        height: 24px;
+        background-color: $base-orange;
+        border-width: 4px;
+        box-shadow: 0 0 0 1px $base-orange;
+    }
+}
+
+.features {}
