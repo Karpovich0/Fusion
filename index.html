@@ -3,20 +3,61 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fusion</title>
+    <title>Fusion Travel</title>
 
     <link rel="stylesheet" href="css/DDS2.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico">
     <link rel="icon" href="/img/icons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/img/icons/180.png">
-    <link rel="manifest" href="manifest.webmanifest"> -->
+    <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body>
+    <svg style="display: none;">
+        <symbol id="arrow" viewBox="0 0 16 16">
+            <path d="m10.318 3.61 3.536 3.536a.5.5 0 0 1 0 .708l-3.536 3.535a.5.5 0 0 1-.707-.707l2.681-2.683L2.5 8a.5.5 0 0 1-.492-.41L2 7.5a.5.5 0 0 1 .41-.492L2.5 7h9.792L9.611 4.317a.5.5 0 0 1 .707-.707Z"/>
+        </symbol>
+        <symbol id="facebook" viewBox="0 0 24 24">
+            <g>
+                <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
+            </g>
+        </symbol>
+
+        <symbol id="instagram" viewBox="0 0 438.536 438.536">
+            <g>
+                <path d="M421.981,16.562C410.941,5.519,397.711,0,382.298,0H56.248C40.83,0,27.604,5.521,16.561,16.562
+                    C5.52,27.6,0.001,40.828,0.001,56.243V382.29c0,15.413,5.518,28.644,16.56,39.683c11.043,11.04,24.272,16.563,39.687,16.563
+                    h326.046c15.41,0,28.644-5.523,39.684-16.563c11.043-11.039,16.557-24.27,16.557-39.683V56.243
+                    C438.534,40.825,433.021,27.604,421.981,16.562z M157.462,158.025c17.224-16.652,37.924-24.982,62.097-24.982
+                    c24.36,0,45.153,8.33,62.381,24.982c17.228,16.655,25.837,36.785,25.837,60.386c0,23.598-8.609,43.729-25.837,60.379
+                    c-17.228,16.659-38.014,24.988-62.381,24.988c-24.172,0-44.87-8.336-62.097-24.988c-17.228-16.652-25.841-36.781-25.841-60.379
+                    C131.621,194.81,140.234,174.681,157.462,158.025z M388.865,370.589c0,4.945-1.718,9.083-5.141,12.416
+                    c-3.433,3.33-7.519,4.996-12.282,4.996h-305.2c-4.948,0-9.091-1.666-12.419-4.996c-3.333-3.326-4.998-7.471-4.998-12.416V185.575
+                    H89.08c-3.805,11.993-5.708,24.462-5.708,37.402c0,36.553,13.322,67.715,39.969,93.511c26.65,25.786,58.721,38.685,96.217,38.685
+                    c24.744,0,47.583-5.903,68.527-17.703c20.937-11.807,37.486-27.839,49.676-48.112c12.183-20.272,18.274-42.4,18.274-66.38
+                    c0-12.94-1.91-25.406-5.715-37.402h38.547v185.014H388.865z M388.865,115.626c0,5.52-1.903,10.184-5.716,13.99
+                    c-3.805,3.809-8.466,5.711-13.989,5.711h-49.676c-5.517,0-10.185-1.903-13.99-5.711c-3.806-3.806-5.708-8.47-5.708-13.99V68.522
+                    c0-5.33,1.902-9.945,5.708-13.848c3.806-3.901,8.474-5.854,13.99-5.854h49.676c5.523,0,10.185,1.952,13.989,5.854
+                    c3.812,3.903,5.716,8.518,5.716,13.848V115.626z"/>
+            </g>
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 512 512">
+            <g>
+                <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                    c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                    c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                    c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                    c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                    c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                    C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                    C480.224,136.96,497.728,118.496,512,97.248z"/>
+            </g>
+        </symbol>
+    </svg>
+
     <header class="header">
         <div class="container ">
             <div class="header__inner ">
@@ -73,14 +114,230 @@
                             <p class="welcome__text">Thought leader cortado viral viral earned media long shadow actionable</p>
                         </li>
                     </ul>
-                    <ul class="welcome__controls">
-                        <li class="welcome__circle"><button type="button" class="welcome__btn"></button></li>
-                        <li class="welcome__circle"><button type="button" class="welcome__btn welcome__btn--active"></button></li>
-                        <li class="welcome__circle"><button type="button" class="welcome__btn"></button></li>
+                    <ul class="controls">
+                        <li class="controls__circle"><button type="button" class="controls__btn"></button></li>
+                        <li class="controls__circle"><button type="button" class="controls__btn controls__btn--active"></button></li>
+                        <li class="controls__circle"><button type="button" class="controls__btn"></button></li>
                     </ul>
                 </div>
             </div>
         </section>
+        <!-- END welcome -->
+        <section class="find">
+            <div class="container container--paddings container--wide">
+                <header class="container__header container__header-small-paddings">
+                    <h2 class="container__title">Find Your Destination</h2>
+                    <p class="container__subtext">Most Popular Places Are Waiting For You</p>
+                </header>
+                <div class="find__body">
+                    <p class="find__search">
+                        <form action="" class="find__form">
+                            <input class="find__image-search" type="image" name="find__search" src="/img/find/image-search.png" alt="">
+                            <input class="find__input-text" type="text" placeholder="Search...">
+                        </form>
+                    </p>
+                    <div class="find__slider-container">
+                        <button type="button" class="find__arrow find__arrow--left">
+                            <svg class="find__svg" width="62" height="42.6">
+                                <use href="#arrow"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="find__arrow find__arrow--right">
+                            <svg class="find__svg" width="62" height="42.6">
+                                <use href=" #arrow "></use>
+                            </svg>
+                        </button>
+                        <ul class="find__slider">
+                            <li class="find__item ">
+                                <a href=" " class="find__link ">
+                                    <img src="/img/find/img.jpg " alt=" " class="find__img " width="396 " height="400 ">
+                                    <h3 class="find__title ">Thailand</h3>
+                                </a>
+                            </li>
+                            <li class="find__item ">
+                                <a href=" " class="find__link ">
+                                    <img src="/img/find/img.jpg " alt=" " class="find__img " width="396 " height="400 ">
+                                    <h3 class="find__title ">Australia</h3>
+                                </a>
+                            </li>
+                            <li class="find__item ">
+                                <a href=" " class="find__link ">
+                                    <img src="/img/find/img.jpg " alt=" " class="find__img " width="396 " height="400 ">
+                                    <h3 class="find__title ">Indonesia</h3>
+                                </a>
+                            </li>
+                            <li class="find__item ">
+                                <a href=" " class="find__link ">
+                                    <img src="/img/find/img.jpg " alt=" " class="find__img " width="396 " height="400 ">
+                                    <h3 class="find__title ">France</h3>
+                                </a>
+                            </li>
+                            <li class="find__item ">
+                                <a href=" " class="find__link ">
+                                    <img src="/img/find/img.jpg " alt=" " class="find__img " width="396 " height="400 ">
+                                    <h3 class="find__title ">Malaysia</h3>
+                                </a>
+                            </li>
+                            <li class="find__item ">
+                                <a href=" " class="find__link ">
+                                    <img src="/img/find/img.jpg " alt=" " class="find__img " width="396 " height="400 ">
+                                    <h3 class="find__title ">UAE</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END find -->
+        <section class="blog">
+            <div class="container container--paddings ">
+                <header class="container__header container__header-small-paddings">
+                    <h2 class="container__title">Latest News From Blog</h2>
+                    <p class="container__subtext">See Whats People Are Sharing Their Thoughts</p>
+                </header>
+                <div class="blog__body">
+                    <!-- here must be links tags, but I wasn`t able to group due to bad structure of PSD template -->
+                    <div class="blog__grid">
+                        <img src="/img/blog__img.jpg" alt="" class="blog__big-img">
+                        <div class="blog__vertical-article blog__vertical-article--first">
+                            <div class="blog__img-wrapper-height">
+                                <img src="/img/blog__img.jpg" alt="" class="blog__article-img">
+                            </div>
+                            <div class="blog__text-wrapper">
+                                <p class="blog__title">The Statue Of Liberty Travel
+                                </p>
+                                <p class="blog__text">Qualitative ship it user story grok SpaceTeam waterfall is so 2000 and late quantitative vs.</p>
+                            </div>
+                        </div>
+                        <img src="/img/blog__img.jpg" alt="" class="blog__small-img blog__small-img--first">
+                        <div class="blog__vertical-article blog__vertical-article--second">
+                            <div class="blog__img-wrapper-height">
+                                <img src="/img/blog__img.jpg" alt="" class="blog__article-img">
+                            </div>
+                            <div class="blog__text-wrapper">
+                                <p class="blog__title">The Best Natural Paradise - Shimla
+                                </p>
+                                <p class="blog__text">Ship it integrate prototype fund human-centered design integrate big data convergence.</p>
+                            </div>
+                        </div>
+                        <div class="blog__horizontall-article">
+                            <div class="blog__img-wrapper-width blog__img-wrapper-height blog__img-wrapper-left">
+                                <img src="/img/blog__img.jpg" alt="" class="blog__article-img">
+                            </div>
+                            <div class="blog__text-wrapper-horizontal">
+                                <p class="blog__title blog__title--padding-right">Most Beautiful Place In The World - Istunbul
+                                </p>
+                                <p class="blog__text">Venture capital food-truck minimum viable product ideate pitch deck experiential cortado affordances parallax</p>
+                            </div>
+                        </div>
+                        <img src="/img/blog__img.jpg" alt="" class="blog__small-img blog__small-img--second">
+                    </div>
+                </div>
+                <button class="btn btn--center">Keep Reading</button>
+            </div>
+        </section>
+        <!-- END blog -->
+        <section class="testimonials">
+            <!-- In this section fonts much bigger than at PSD template - this isn`t my fault. -->
+            <div class="container container--paddings container--border-none">
+                <header class="container__header container__header-small-paddings">
+                    <h2 class="container__title">What Our Client Says</h2>
+                    <p class="container__subtext">People’s sharing their thought about our works</p>
+                </header>
+                <div class="testimonials__slider">
+                    <div class="testimonials__slider--container">
+                        <img class="testimonials__quote testimonials__quote--left" alt="" src="/img/testimonials__quote.png" width="75" height="67">
+                        <firgure class="testimonials__figure">
+                            <img src="/img/testimonials.jpg" alt="" class="testimonials__img">
+                            <div class="testimonials__quote-wrapper">
+                                <blockquote class="testimonials__body">
+                                    <p class="testimonials__text">Text styles for "Integrate 360 campaign viral disrupt pair programming latte paradigm hacker 360 campaign cortado bootstrapping. Thinker-maker-doer paradigm affordances viral bootstrapping ship it human-centered design
+                                        waterfall is so 2000 and late responsive integrate parallax.</p>
+                                </blockquote>
+                                <figcaption>
+                                    <cite class="testimonials__author">Dimitri Vegas</cite>
+                                    <cite class="testimonials__place">"London, England</cite>
+                                </figcaption>
+                            </div>
+                        </firgure>
+                        <img class="testimonials__quote testimonials__quote--right" alt="" src="/img/testimonials__quote.png" width="75" height="67">
+                    </div>
+                    <ul class="controls">
+                        <li class="controls__circle"><button type="button" class="controls__btn"></button></li>
+                        <li class="controls__circle"><button type="button" class="controls__btn controls__btn--active"></button></li>
+                        <li class="controls__circle"><button type="button" class="controls__btn"></button></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- END testimonials -->
+        <section class="subscribe">
+            <div class="subscribe__inner container">
+                <h2 class="visually-hidden">
+                    Make subscription
+                </h2>
+                <div class="subscribe__text">
+                    Get special discount on your first journey
+                </div>
+                <button class="btn btn--white-border">Book Now</button>
+            </div>
+        </section>
+        <!-- END subscribe -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <section class="footer__about footer__section">
+                        <h2 class="footer__title">About Us</h2>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">About Us</li>
+                            <li class="footer__list-item">Blog</li>
+                            <li class="footer__list-item">Contact Us</li>
+                        </ul>
+                    </section>
+                    <section class="footer__address footer__section">
+                        <h2 class="footer__title">Address</h2>
+                        <address>
+                            4433 Heavner Court Plainview, New York
+                        </address>
+                    </section>
+                    <section class="footer__contacts footer__section">
+                        <h2 class="footer__title">Contact Us</h2>
+                        <address>                             
+                            <a href="mailto:help@agency.com">Email: help@agency.com</a>
+                            <a href="tel:+5162600598">Cell: +516-260-0598</a>
+                        </address>
+                    </section>
+                    <section class="footer__follow footer__section">
+                        <h2 class="footer__title">Follow Us</h2>
+                        <ul class="footer__list footer__list--flex">
+                            <li class="footer__list-item footer__list-item--social">
+                                <a href="" class="footer__link footer__link--social">
+                                    <svg class="footer__svg" width="18" height="18">
+                                        <use href="#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer__list-item footer__list-item--social">
+                                <a href="" class="footer__link footer__link--social">
+                                    <svg class="footer__svg" width="18" height="18">
+                                        <use href="#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer__list-item footer__list-item--social">
+                                <a href="" class="footer__link footer__link--social">
+                                    <svg class="footer__svg" width="18" height="18">
+                                        <use href="#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="footer__copyrights">Copyright@Parag 2016, All Rights Reserved</div>
+            </div>
+        </footer>
     </main>
 </body>
 
